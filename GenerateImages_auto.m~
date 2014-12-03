@@ -21,7 +21,7 @@ for i = 1:Ns
     
 % set time-frequency window
 %--------------------------------------------------------------------------
-    D.inv{1}.contrast.woi  = [100 132; 188 224];   % peristimulus time (ms); change this to include as many windows of interest as you want
+    D.inv{1}.contrast.woi  = [100 132; 188 224];   % peristimulus time (ms)
     D.inv{1}.contrast.fboi = [];      % frequency window (Hz)
  
 % and evaluate contrast

@@ -329,13 +329,16 @@ end
 diff_time = alltimes_mt(:,2) - alltimes_cg(:,2);
 diff_type = alltimes_mt(:,1) - alltimes_cg(:,1);
 
-%% filter 0.1 to 40 hz
+%% Back to pipeline: filter 0.1 to 40 hz
+
 for s = allsubs
+    
     if s == 2
         bs = 1;
     else
         bs = 1:4;
     end
+    
     for b = bs        
     filename = strcat('MEGsub',num2str(s),'block',num2str(b),'_ds_chan_evt.set');
     EEG = pop_loadset(filename); %Load up EEG dataset
@@ -348,6 +351,7 @@ for s = allsubs
     savefile = strcat('MEGsub',num2str(s),'block',num2str(b),'_ds_chan_evt_fil.set');
     EEG = pop_saveset(EEG, savefile);    
     end
+    
 end
     
 %% run ica for concatenated (allblocks) data

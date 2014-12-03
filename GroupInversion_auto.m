@@ -1,5 +1,6 @@
 %% Group inversion script without gui prompt
 %last updated Nov19,2013; tested okay
+%Normal operation requires the custom-made _yy scripts using the spm8(5236) in the dropbox 
 
 % Select file names to be inverted
     [S, sts] = spm_select(Inf, 'mat','Select M/EEG mat files');
